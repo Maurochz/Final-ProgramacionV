@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desarrollo\\Parcial3\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj": {}
+    "D:\\Documentos\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj": {}
   },
   "projects": {
-    "D:\\Desarrollo\\Parcial3\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj": {
+    "D:\\Documentos\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desarrollo\\Parcial3\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj",
+        "projectUniqueName": "D:\\Documentos\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj",
         "projectName": "Parcial29-6",
-        "projectPath": "D:\\Desarrollo\\Parcial3\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj",
+        "projectPath": "D:\\Documentos\\Parcial29-6\\Parcial29-6\\Parcial29-6.csproj",
         "packagesPath": "C:\\Users\\Mauro Nicolás\\.nuget\\packages\\",
-        "outputPath": "D:\\Desarrollo\\Parcial3\\Parcial29-6\\Parcial29-6\\obj\\",
+        "outputPath": "D:\\Documentos\\Parcial29-6\\Parcial29-6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
