@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Parcial29_6.Models.Pagos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Busqueda filtrada por socio</h1>
+<br />
+
+<form asp-action="Socios" asp-action="Indexconbarra">
+    <p>
+        Buscar: <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar por numero de socio" class="btn btn-sm btn-dark" /> 
+    </p>
+    
+
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NSocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorCuota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechadePago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NroCuota)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NSocio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorCuota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechadePago)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NroCuota)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

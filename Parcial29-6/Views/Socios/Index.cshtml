@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Parcial29_6.Models.Socios>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de socios</h1>
+<br />
+
+<p>
+    <a asp-action="Create">Registrar nuevo socio</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NSocio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Actividad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NSocio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a> |
+                <a asp-action="Indexconbarra" asp-route-id="@item.Id">Ver pagos</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

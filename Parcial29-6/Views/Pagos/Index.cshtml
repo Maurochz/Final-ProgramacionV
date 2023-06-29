@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Parcial29_6.Models.Pagos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Registro de pagos</h1>
+<br />
+
+<p>
+    <a asp-action="Create">Registrar un nuevo pago</a>
+</p>
+
+<form asp-controller="Pagos" asp-action="Index">
+    <p>
+        Buscar por numero de socio: <input type="text" name="buscar" class="form-text" />
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark" /> 
+    </p>
+
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NSocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorCuota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechadePago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NroCuota)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NSocio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorCuota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechadePago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NroCuota)
+            </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

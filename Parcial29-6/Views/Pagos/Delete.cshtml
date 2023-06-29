@@ -1,0 +1,45 @@
+﻿@model Parcial29_6.Models.Pagos
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>¿Esta seguro de eliminar este registro?</h1>
+<br />
+<div>
+    <h4>Pago</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NSocio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NSocio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ValorCuota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ValorCuota)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechadePago)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechadePago)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NroCuota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NroCuota)
+        </dd>
+    </dl>
+
+    <br />  
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver</a>
+    </form>
+</div>
